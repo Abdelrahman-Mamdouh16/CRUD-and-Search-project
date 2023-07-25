@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class=" w-75 mx-auto">
+        <section class="bg-info p-3">
+            <div class="my-4">
+                <label for="productName" class="">productName:</label>
+                <input class="form-control" type="text" id="productName" placeholder="productName">
+            </div>
+
+            <div class="my-4">
+                <label for="productPrice:" class="">productPrice:</label>
+                <input class="form-control " type="number" id="productPrice" placeholder="productPrice">
+            </div>
+
+            <div class="my-4">
+                <label for="productCategory" class="">productCategory:</label>
+                <input class="form-control" type="text" id="productCategory" placeholder="productCategory">
+            </div>
+
+            <div class="my-4">
+                <label for="productDescription" class="">productDescription:</label>
+                <textarea class="form-control text" type="text" id="productDescription"
+                    placeholder="productDescription"></textarea>
+            </div>
+            <button class="btn btn-primary w-100" id="addBtn" onclick=" addProduct()">Add product</button>
+            <button class="btn btn-primary w-100 d-none" id="updateBtn" onclick="updateProduct()">Update product</button>
+        </section>
+
+        <input type="text" placeholder="Search.." id="SearchInput" oninput="Search()" class="form-control my-3 w-75 mx-auto bg-secondary" >
+
+
+        <section class="mt-4 ">
+            <table class="table table-dark text-center">
+                <thead class="bg-black">
+                    <tr>
+                        <th scope="col">#index</th>
+                        <th scope="col">ProductName</th>
+                        <th scope="col">ProductPrice</th>
+                        <th scope="col">ProductCategory</th>
+                        <th scope="col">ProductDescription</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+            </table>
+        </section>
+
+    </main>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
