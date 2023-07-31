@@ -159,7 +159,7 @@ function updateProduct() {
 
 
 function productNameValid() {
-    var productNameRegex = /^[A-Z][a-z]{1,}\s?([A-Z][a-z]{1,})?\s?([A-Z][a-z]{1,})?$/;
+    var productNameRegex = /^[A-Z][a-z]{1,}\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?$/;
     var Name = productNameData.value;
     if (productNameRegex.test(Name) == true) {
         productNameData.classList.add("is-valid");
@@ -204,7 +204,7 @@ function productPriceValid() {
 }
 
 function productCategoryValid() {
-    var productCategoryRegex = /^[A-Z][a-z]{1,}\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?$/;
+    var productCategoryRegex = /^[A-Z][a-z]{1,}\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?$/;
     var Category = productCategoryData.value;
     if (productCategoryRegex.test(Category) == true) {
         productCategoryData.classList.add("is-valid");
@@ -225,7 +225,7 @@ function productCategoryValid() {
 }
 
 function productDescriptionValid() {
-    var productDescriptionRegex = /^[A-Z][a-z]{1,}\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?\s?([a-z]{1,})?$/;
+    var productDescriptionRegex = /^[A-Z][a-z]{1,}\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?\s?([A-Z]?[a-z]{1,})?$/;
     var Description = productDescriptionData.value;
     if (productDescriptionRegex.test(Description) == true) {
         productDescriptionData.classList.add("is-valid");
