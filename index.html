@@ -13,28 +13,47 @@
 
     <main class=" w-75 mx-auto">
         <section class="bg-info p-3">
+            <div id="alert" class="text-center">
+
+            </div>
             <div class="my-4">
                 <label for="productName" class="">productName:</label>
-                <input class="form-control" type="text" id="productName" placeholder="productName">
+                <input class="form-control" type="text" id="productName" placeholder="productName"
+                    oninput="productNameValid()">
+                <div class="alert alert-danger d-none" id="productNameAlert" role="alert">
+                    Product Name must be 5 ~ 10 !
+                </div>
             </div>
 
             <div class="my-4">
                 <label for="productPrice:" class="">productPrice:</label>
-                <input class="form-control " type="number" id="productPrice" placeholder="productPrice">
+                <input class="form-control" type="number" id="productPrice" placeholder="productPrice"
+                    oninput="productPriceValid()">
+                <div class="alert alert-danger d-none" id="productPriceAlert" role="alert">
+                    Product Price must be valid !
+                </div>
             </div>
 
             <div class="my-4">
                 <label for="productCategory" class="">productCategory:</label>
-                <input class="form-control" type="text" id="productCategory" placeholder="productCategory">
+                <input class="form-control" type="text" id="productCategory" placeholder="productCategory"
+                    oninput="productCategoryValid()">
+                <div class="alert alert-danger d-none" id="productCategoryAlert" role="alert">
+                    Product Name must be 3 ~ 10 !
+                </div>
             </div>
 
             <div class="my-4">
                 <label for="productDescription" class="">productDescription:</label>
-                <textarea class="form-control text" type="text" id="productDescription"
-                    placeholder="productDescription"></textarea>
+                <textarea class="form-control text" type="text" id="productDescription" placeholder="productDescription"
+                    oninput="productDescriptionValid()"></textarea>
+                <div class="alert alert-danger d-none" id="productDescriptionAlert" role="alert">
+                    Product Name must be 3 ~ 10 !
+                </div>
             </div>
             <button class="btn btn-primary w-100" id="addBtn" onclick=" addProduct()">Add product</button>
-            <button class="btn btn-primary w-100 d-none" id="updateBtn" onclick="updateProduct()">Update product</button>
+            <button class="btn btn-primary w-100 d-none" id="updateBtn" onclick="updateProduct()">Update
+                product</button>
         </section>
 
         <input type="text" placeholder="Search.." id="SearchInput" oninput="Search()" class="form-control my-3 w-75 mx-auto bg-secondary" >
@@ -53,7 +72,7 @@
                     </tr>
                 </thead>
                 <tbody id="tbody">
-                    
+
             </table>
         </section>
 
