@@ -21,9 +21,8 @@ if (localStorage.getItem("products") != null) {
 }
 
 function addProduct() {
-
     if (productNameValid() == false || productPriceValid() == false || productCategoryValid() == false || productDescriptionValid() == false) {
-        alert.innerHTML =`<div class="alert alert-danger" role="alert">
+        alert.innerHTML = `<div class="alert alert-danger" role="alert">
         <span style="background-color: transparent;" class="d-block">Product Name must contain at least 3 characters </span>
         <span style="background-color: transparent;" class="d-block">Product Price must be a valid Number</span>
         <span style="background-color: transparent;" class="d-block">Product Category must contain at least 3 characters</span>
